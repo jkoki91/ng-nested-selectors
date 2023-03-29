@@ -19,7 +19,7 @@
         </div>
     </div>
     <!-- Paises  -->
-    <div class="row mb-3">
+    <div class="row mb-3" *ngIf="paises.length !== 0">
         <div class="col">
             <label class="form-label">País:</label>
             <select class="form-control"
@@ -34,7 +34,7 @@
     </div>
     
     <!-- fronteras  -->
-    <div class="row mb-3">
+    <div class="row mb-3" *ngIf="fronteras.length !== 0">
         <div class="col">
             <label class="form-label">Frontera:</label>
             <select class="form-control"
@@ -45,6 +45,15 @@
                 </option>
 
             </select>
+        </div>
+    </div>
+
+    <!-- Alert  -->
+    <div class="row mb-3" *ngIf="cargando">
+        <div class="col">
+            <div class="alert alert-primary">
+                Cargando...
+            </div>
         </div>
     </div>
 
